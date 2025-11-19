@@ -21,7 +21,7 @@ export default function Login() {
 
         <input
           type="email"
-          placeholder="Email"
+          placeholder="Email Address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           style={styles.input}
@@ -50,7 +50,7 @@ export default function Login() {
         </p>
 
         <p style={styles.text}>
-          Don’t have an account? <a href="#" style={styles.link}>Sign Up</a>
+          New user? <a href="#" style={styles.link}>Sign Up</a>
         </p>
       </form>
     </div>
@@ -104,7 +104,7 @@ const styles = {
     cursor: "pointer",
     marginTop: 10,
     fontSize: 16,
-    transition: "background 0.3s",
+    transition: "0.3s",
   },
   text: {
     marginTop: 15,
