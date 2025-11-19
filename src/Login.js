@@ -12,6 +12,11 @@ export default function Login() {
   return (
     <div style={styles.container}>
       <form style={styles.form} onSubmit={handleSubmit}>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+          alt="logo"
+          style={styles.logo}
+        />
         <h2 style={styles.title}>Welcome Back</h2>
 
         <input
@@ -20,6 +25,8 @@ export default function Login() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           style={styles.input}
+          onFocus={(e) => (e.target.style.border = "2px solid #667eea")}
+          onBlur={(e) => (e.target.style.border = "1px solid #ccc")}
           required
         />
 
@@ -29,6 +36,8 @@ export default function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           style={styles.input}
+          onFocus={(e) => (e.target.style.border = "2px solid #667eea")}
+          onBlur={(e) => (e.target.style.border = "1px solid #ccc")}
           required
         />
 
@@ -37,11 +46,11 @@ export default function Login() {
         </button>
 
         <p style={styles.text}>
-          Forgot your password? <a href="#" style={styles.link}>Reset</a>
+          Forgot password? <a href="#" style={styles.link}>Reset</a>
         </p>
 
         <p style={styles.text}>
-          Don't have an account? <a href="#" style={styles.link}>Sign Up</a>
+          Don’t have an account? <a href="#" style={styles.link}>Sign Up</a>
         </p>
       </form>
     </div>
@@ -65,6 +74,10 @@ const styles = {
     width: 350,
     textAlign: "center",
   },
+  logo: {
+    width: 60,
+    marginBottom: 20,
+  },
   title: {
     marginBottom: 30,
     color: "#333",
@@ -77,6 +90,8 @@ const styles = {
     borderRadius: 8,
     border: "1px solid #ccc",
     fontSize: 16,
+    outline: "none",
+    transition: "border 0.3s",
   },
   button: {
     width: "100%",
